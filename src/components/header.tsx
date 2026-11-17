@@ -1,11 +1,15 @@
+// คอมโพเนนต์ส่วนหัวของหน้า
+// props ที่รับเข้ามา: ข้อความหัวเรื่อง
 interface HeaderProps {
     title: string;
 }
 
-const Header = (props: HeaderProps) => {
+// เขียนแบบ arrow function (ให้ผลเหมือน function ปกติ)
+const Header = ({ title }: HeaderProps) => {
     return (
         <header>
-            <h1>{props.title}</h1>
+            {/* แสดงชื่อหัวเรื่องที่ส่งมาจาก App */}
+            <h1>{title}</h1>
             <hr/>
         </header>
     );
